@@ -462,10 +462,10 @@ module.exports = {
   treeForVendor(tree) {
     let trees = [];
 
-    // let versionTree = writeFile(
-    //   'ember-paper/register-version.js',
-    //   `Ember.libraries.register('Ember Paper', '${version}');`
-    // ); //JAT
+    let versionTree = writeFile(
+      'ember-paper/register-version.js',
+      `Ember.libraries.register('Ember Paper', '${version}');`
+    );
 
     let hammerJs = fastbootTransform(new Funnel(this.pathBase('hammerjs'), {
       files: ['hammer.js'],
@@ -477,7 +477,7 @@ module.exports = {
       destDir: 'propagating-hammerjs'
     }));
 
-    trees = trees.concat([hammerJs, propagatingHammerJs]); //JAT, versionTree]);
+    trees = trees.concat([hammerJs, propagatingHammerJs, versionTree]);
 
     if (tree) {
       trees.push(tree);
