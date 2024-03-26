@@ -477,7 +477,7 @@ module.exports = {
       destDir: 'propagating-hammerjs'
     }));
 
-    trees = trees.concat([hammerJs, propagatingHammerJs, versionTree]);
+    trees = trees.concat([hammerJs, propagatingHammerJs]); //JAT, versionTree]);
 
     if (tree) {
       trees.push(tree);
