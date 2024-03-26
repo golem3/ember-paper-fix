@@ -1,5 +1,4 @@
 'use strict';
-import Ember from 'ember';
 
 const path = require('path');
 const resolve = require('resolve');
