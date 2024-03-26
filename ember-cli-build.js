@@ -1,4 +1,5 @@
 'use strict';
+import Ember from 'ember';
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function (defaults) {

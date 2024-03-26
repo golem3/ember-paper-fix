@@ -1,4 +1,5 @@
 'use strict';
+import Ember from 'ember';
 
 const path = require('path');
 const resolve = require('resolve');
@@ -462,10 +463,10 @@ module.exports = {
   treeForVendor(tree) {
     let trees = [];
 
-    let versionTree = writeFile(
-      'ember-paper/register-version.js',
-      `Ember.libraries.register('Ember Paper', '${version}');`
-    );
+    // let versionTree = writeFile(
+    //   'ember-paper/register-version.js',
+    //   `Ember.libraries.register('Ember Paper', '${version}');`
+    // ); //JAT
 
     let hammerJs = fastbootTransform(new Funnel(this.pathBase('hammerjs'), {
       files: ['hammer.js'],
