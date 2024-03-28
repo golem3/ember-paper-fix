@@ -463,7 +463,7 @@ module.exports = {
     let trees = [];
 
     let versionTree = writeFile(
-      'ember-paper/register-version.js',
+      'ember-paper/register-version.mjs',
       `import Ember from 'ember';
        Ember.libraries.register('Ember Paper', '${version}');`
     );
