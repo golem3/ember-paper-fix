@@ -2,7 +2,6 @@
   "name": "ember-paper",
   "description": "The Ember approach to Material Design.",
   "version": "1.0.0-beta.36",
-  "type": "commonjs",
   "scripts": {
     "build": "ember build --environment=production",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel \"lint:!(fix)\"",
