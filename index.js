@@ -464,7 +464,8 @@ module.exports = {
 
     let versionTree = writeFile(
       'ember-paper/register-version.js',
-      `ember.libraries.register('Ember Paper', '${version}');`
+      `import Ember from 'ember';
+       Ember.libraries.register('Ember Paper', '${version}');`
     );
 
     let hammerJs = fastbootTransform(new Funnel(this.pathBase('hammerjs'), {
