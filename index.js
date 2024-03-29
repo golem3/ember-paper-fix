@@ -464,7 +464,7 @@ module.exports = {
 
     let versionTree = writeFile(
       'ember-paper/register-version.js',
-      `const Ember = require('ember');
+      `/*global Ember*/;
        Ember.libraries.register('Ember Paper', '${version}');`
     );
 
