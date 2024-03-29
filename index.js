@@ -462,11 +462,23 @@ module.exports = {
   treeForVendor(tree) {
     let trees = [];
 
+    // let versionTree = writeFile(
+    //   'ember-paper/register-version.js',
+    //   `/*global Ember*/;
+    //    Ember.libraries.register('Ember Paper', '${version}');` //JAT throws errors for Ember not defined
+    // );
+
     let versionTree = writeFile(
       'ember-paper/register-version.js',
       `/*global Ember*/;
-       Ember.libraries.register('Ember Paper', '${version}');`
-    );
+       let emberLibraries;
+       try {
+        emberLibraries = requireModule('ember)['default'].libraries;
+       } catch {
+        emberLibraries = window.Ember.libraries;
+       }
+       emberLibraries?.register('Ember Paper', '${version}');`
+    )
 
     let hammerJs = fastbootTransform(new Funnel(this.pathBase('hammerjs'), {
       files: ['hammer.js'],
