@@ -473,7 +473,7 @@ module.exports = {
       `/*global Ember*/;
        let emberLibraries;
        try {
-        emberLibraries = requireModule('ember)['default'].libraries;
+        emberLibraries = requireModule('ember')['default'].libraries;
        } catch {
         emberLibraries = window.Ember.libraries;
        }
