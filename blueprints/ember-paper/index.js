@@ -28,6 +28,7 @@ module.exports = {
   },
 
   afterInstall() {
-    return this.addAddonToProject('ember-cli-sass', '^11.0.1');
+    console.log("in ember-paper-fix, afterInstall from index.js"); //JAT
+    //return this.addAddonToProject('ember-cli-sass', '^11.0.1'); //JAT see if it dows anything
   }
 };
