@@ -2,7 +2,7 @@
 {{#in-element destinationEl insertBefore=null}}
   <PaperBackdrop @locked-open={{this.isLockedOpen}} @opaque={{this.opaque}} @fixed={{unless this.parent true}} @class="md-dialog-backdrop" @onClick={{action "outsideClicked"}} />
   <PaperDialogContainer @class={{readonly dialogContainerClass}} @outsideClicked={{action "outsideClicked"}}>
-    <PaperDialogInner @class={{readonly class}} @origin={{origin}} @defaultedParent={{defaultedParent}} @defaultedOpenFrom={{defaultedOpenFrom}} @defaultedCloseTo={{defaultedCloseTo}} @fullscreen={{fullscreen}} @focusOnOpen={{focusOnOpen}}>
+    <PaperDialogInner @class={{readonly class}} @origin={{this.origin}} @defaultedParent={{this.defaultedParent}} @defaultedOpenFrom={{this.defaultedOpenFrom}} @defaultedCloseTo={{this.defaultedCloseTo}} @fullscreen={{this.fullscreen}} @focusOnOpen={{this.focusOnOpen}}>
       {{yield}}
     </PaperDialogInner>
   </PaperDialogContainer>
