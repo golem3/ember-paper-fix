@@ -22,20 +22,20 @@
     onclick={{onClick}}
     oninput={{action "handleInput"}}
 
-    name={{passThru.name}}
-    rows={{passThru.rows}}
-    cols={{passThru.cols}}
-    maxlength={{passThru.maxlength}}
-    tabindex={{passThru.tabindex}}
+    name={{this.passThru.name}}
+    rows={{this.passThru.rows}}
+    cols={{this.passThru.cols}}
+    maxlength={{this.passThru.maxlength}}
+    tabindex={{this.passThru.tabindex}}
     title={{title}}
-    required={{passThru.required}}
-    selectionEnd={{passThru.selectionEnd}}
-    selectionStart={{passThru.selectionStart}}
-    selectionDirection={{passThru.selectionDirection}}
-    wrap={{passThru.wrap}}
-    readonly={{passThru.readonly}}
-    form={{passThru.form}}
-    spellcheck={{passThru.spellcheck}}></textarea>
+    required={{this.passThru.required}}
+    selectionEnd={{this.passThru.selectionEnd}}
+    selectionStart={{this.passThru.selectionStart}}
+    selectionDirection={{this.passThru.selectionDirection}}
+    wrap={{this.passThru.wrap}}
+    readonly={{this.passThru.readonly}}
+    form={{this.passThru.form}}
+    spellcheck={{this.passThru.spellcheck}}></textarea>
 {{else}}
   <input
     class="md-input {{if isInvalid "ng-invalid"}}  {{if isTouched "ng-dirty"}}"
@@ -52,34 +52,34 @@
     onclick={{onClick}}
     oninput={{action "handleInput"}}
 
-    accept={{passThru.accept}}
-    autocomplete={{passThru.autocomplete}}
-    autocorrect={{passThru.autocorrect}}
-    autocapitalize={{passThru.autocapitalize}}
-    autosave={{passThru.autosave}}
-    form={{passThru.form}}
-    formaction={{passThru.formaction}}
-    formenctype={{passThru.formenctype}}
-    formmethod={{passThru.formmethod}}
-    formnovalidate={{passThru.formnovalidate}}
-    formtarget={{passThru.formtarget}}
-    height={{passThru.height}}
-    inputmode={{passThru.inputmode}}
-    min={{passThru.min}}
-    maxlength={{passThru.maxlength}}
-    max={{passThru.max}}
-    multiple={{passThru.multiple}}
-    name={{passThru.name}}
-    pattern={{passThru.pattern}}
-    readonly={{passThru.readonly}}
-    required={{passThru.required}}
-    selectionDirection={{passThru.selectionDirection}}
-    size={{passThru.size}}
-    spellcheck={{passThru.spellcheck}}
-    step={{passThru.step}}
-    tabindex={{passThru.tabindex}}
+    accept={{this.passThru.accept}}
+    autocomplete={{this.passThru.autocomplete}}
+    autocorrect={{this.passThru.autocorrect}}
+    autocapitalize={{this.passThru.autocapitalize}}
+    autosave={{this.passThru.autosave}}
+    form={{this.passThru.form}}
+    formaction={{this.passThru.formaction}}
+    formenctype={{this.passThru.formenctype}}
+    formmethod={{this.passThru.formmethod}}
+    formnovalidate={{this.passThru.formnovalidate}}
+    formtarget={{this.passThru.formtarget}}
+    height={{this.passThru.height}}
+    inputmode={{this.passThru.inputmode}}
+    min={{this.passThru.min}}
+    maxlength={{this.passThru.maxlength}}
+    max={{this.passThru.max}}
+    multiple={{this.passThru.multiple}}
+    name={{this.passThru.name}}
+    pattern={{this.passThru.pattern}}
+    readonly={{this.passThru.readonly}}
+    required={{this.passThru.required}}
+    selectionDirection={{this.passThru.selectionDirection}}
+    size={{this.passThru.size}}
+    spellcheck={{this.passThru.spellcheck}}
+    step={{this.passThru.step}}
+    tabindex={{this.passThru.tabindex}}
     title={{title}}
-    width={{passThru.width}}>
+    width={{this.passThru.width}}>
 {{/if}}
 
 {{#unless hideAllMessages}}
