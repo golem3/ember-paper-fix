@@ -4,12 +4,12 @@
 {{/unless}}
 
 <PaperSidenavInner
-  @class={{class}}
-  @name={{name}}
-  @position={{position}}
-  @lockedOpen={{lockedOpen}}
-  @closed={{closed}}
-  @closeOnClick={{closeOnClick}}
+  @class={{this.class}}
+  @name={{this.name}}
+  @position={{this.position}}
+  @lockedOpen={{this.lockedOpen}}
+  @closed={{this.closed}}
+  @closeOnClick={{this.closeOnClick}}
   @onToggle={{action "onToggle"}}
   ...attributes>
   {{yield}}
