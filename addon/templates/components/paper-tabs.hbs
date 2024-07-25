@@ -21,8 +21,8 @@
         )
       )}}
 
-      {{#if inkBar}}
-        <PaperInkBar @movingRight={{this.movingRight}} @left={{inkBar.left}} @right={{inkBar.right}} />
+      {{#if this.inkBar}}
+        <PaperInkBar @movingRight={{this.movingRight}} @left={{this.inkBar.left}} @right={{this.inkBar.right}} />
       {{/if}}
 
     </md-pagination-wrapper>
