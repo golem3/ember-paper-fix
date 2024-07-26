@@ -446,14 +446,16 @@ module.exports = {
       let emberPowerSelect = this.addons.filter(function(addon) {
         return addon.name === 'ember-power-select';
       })[0];
-      response = emberPowerSelect.contentFor(type, config);
-      if (config.environment !== 'test' &&  !config._emberPaperContentForInvoked) {
-        config._emberPaperContentForInvoked = true;
-        response = `
-          ${response || ''}
-          <div id="paper-wormhole"></div>
-          <div id="paper-toast-fab-wormhole"></div>
-        `;
+      if (emberPowerSelect != null) { //JAT sketchy check to see if it found ember-power-select
+        response = emberPowerSelect.contentFor(type, config);
+        if (config.environment !== 'test' &&  !config._emberPaperContentForInvoked) {
+          config._emberPaperContentForInvoked = true;
+          response = `
+            ${response || ''}
+            <div id="paper-wormhole"></div>
+            <div id="paper-toast-fab-wormhole"></div>
+          `;
+        }
       }
       return response;
     }
